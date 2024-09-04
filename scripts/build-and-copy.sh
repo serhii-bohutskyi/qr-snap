@@ -3,7 +3,7 @@
 # Define paths relative to the script location
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$SCRIPT_DIR/.."
-ANGULAR_APP_DIR="$PROJECT_ROOT/horoscope-ui"
+ANGULAR_APP_DIR="$PROJECT_ROOT"
 DEST_DIR="$PROJECT_ROOT/docs"
 TMP_DIR="$PROJECT_ROOT/tmp"
 CNAME_FILE="$DEST_DIR/CNAME"
@@ -36,7 +36,7 @@ fi
 
 # Copy the build output to the docs directory
 echo "Copying build output to $DEST_DIR..."
-cp -r "$ANGULAR_APP_DIR/dist/horoscope-ui/browser/"* "$DEST_DIR/"
+cp -r "$ANGULAR_APP_DIR/dist/qr-code-generator/browser/"* "$DEST_DIR/"
 
 # Clean up the temporary directory
 echo "Cleaning up temporary files..."

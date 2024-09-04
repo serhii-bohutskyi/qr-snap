@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles for index.html */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Updated to use Poppins font */
+  background-color: #f4f4f9;
+  text-align: center; /* Center-align text globally */
+}
+
+/* Center the content inside the body using Flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Ensure the app-root takes up the full width and centers content */
+app-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Header Section - spans the full width of the page */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Description in the Header */
+.description {
+  text-align: center; /* Center-align the text in the description */
+  max-width: 600px; /* Limit the width of the description for readability */
+  margin: 0 auto; /* Center the description block */
+}
+
+.description h1 {
+  margin: 0;
+  font-size: 28px; /* Larger font for the title */
+  color: #333;
+  font-weight: 600; /* Bold for emphasis */
+}
+
+.description p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Buy Me a Coffee Button */
+.buy-coffee-button {
+  background-color: #ffdd57;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-coffee-button:hover {
+  background-color: #ffcd47;
+}
+
+/* Container styling (inside app-root) */
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* For smaller screens, adjust padding and layout */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buy-coffee-button {
+    margin-top: 10px;
+  }
+}

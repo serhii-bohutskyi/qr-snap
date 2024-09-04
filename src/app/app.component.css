@@ -1,0 +1,215 @@
+/* General container */
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20px; /* Add margin to push the container below the header */
+}
+
+/* Title */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Textarea Styling */
+textarea {
+  width: calc(100% - 20px); /* Same width as select */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  resize: vertical;
+  min-height: 60px;
+  max-height: 150px;
+  overflow: auto;
+  margin-bottom: 15px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Select Input Styling */
+select {
+  width: calc(100% - 20px); /* Ensure select matches the width of the textarea */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Color Input Styling */
+input[type="color"] {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="color"]:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Disabled state styling */
+input[type="color"].disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Disabled Message for Transparent Background */
+.disabled-message {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Checkbox Styling */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between the label and checkbox */
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Button Styling */
+.generate-btn,
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.generate-btn:hover,
+.download-btn:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: scale(1.05);
+}
+
+.generate-btn:active,
+.download-btn:active {
+  transform: scale(0.98);
+  background: linear-gradient(135deg, #0056b3, #0096ff);
+}
+
+/* Disable the button when inactive */
+.download-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Info Icon Styling */
+.info-icon {
+  font-size: 14px;
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.info-icon:hover {
+  text-decoration: underline;
+}
+
+/* QR Code Container */
+.qr-container {
+  margin-top: 30px;
+  width: 100%;
+  height: 320px; /* Increase height to avoid overlap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.qr-placeholder {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 500px) {
+  .container {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  textarea,
+  select {
+    font-size: 12px;
+  }
+
+  .generate-btn,
+  .download-btn {
+    font-size: 14px;
+  }
+
+  .qr-container {
+    height: 280px;
+  }
+}
